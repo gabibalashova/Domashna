@@ -1,43 +1,51 @@
-﻿using System;
-
-namespace _1
+﻿namespace _2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the 1st word in separate letters: ");
-            string[] arr1 = Console.ReadLine().Split(' ').ToArray();
+            string[] input = Console.ReadLine().Split();
+            int n = input.Length;
+            int[] arr = new int[n];
 
-            Console.Write("Enter the 2nd word in separate letters: ");
-            string[] arr2 = Console.ReadLine().Split(' ').ToArray();
-
-            int minLength = Math.Min(arr1.Length, arr2.Length);
-            bool arr1First = false;
-            int i;
-            for (i = 0; i < minLength; i++)
+            for (int i = 0; i < n; i++)
             {
-                if (string.Compare(arr1[i], arr2[i]) < 0)
+                arr[i] = int.Parse(input[i]);
+            }
+
+            int x = int.Parse(Console.ReadLine());
+            int left = 0;
+            int right = n - 1;
+            while (left <= right)
+            {
+                int mid = (left + right) / 2;
+
+                if (x < arr[mid])
                 {
-                    arr1First = true;
-                    break;
+                    right = mid - 1;
                 }
-                else if (string.Compare(arr1[i], arr2[i]) > 0)
+                else
                 {
-                    arr1First = false;
-                    break;
+                    left = mid + 1;
                 }
             }
 
-            if (arr1First || (arr1.Length < arr2.Length && minLength == arr1.Length))
+            int pos = left;
+            int[] result = new int[n + 1];
+
+            for (int i = 0; i < pos; i++)
             {
-                Console.WriteLine(arr1[i]);
-                Console.WriteLine(arr2[i]);
+                result[i] = arr[i];
             }
-            else
+
+            result[pos] = x;
+            for (int i = pos; i < n; i++)
             {
-                Console.WriteLine(arr2[i]);
-                Console.WriteLine(arr1[i]);
+                result[i + 1] = arr[i];
+            }
+            for (int i = 0; i < result.Length; i++)
+            {
+                Console.Write(result[i] + " ");
             }
         }
     }
