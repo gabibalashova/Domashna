@@ -1,51 +1,47 @@
-﻿namespace _2
+﻿namespace _3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             string[] input = Console.ReadLine().Split();
-            int n = input.Length;
-            int[] arr = new int[n];
+            int[] arr = new int[input.Length];
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < input.Length; i++)
             {
                 arr[i] = int.Parse(input[i]);
             }
 
-            int x = int.Parse(Console.ReadLine());
+            int number = int.Parse(Console.ReadLine());
             int left = 0;
-            int right = n - 1;
+            int right = arr.Length - 1;
+            bool found = false;
+
             while (left <= right)
             {
                 int mid = (left + right) / 2;
 
-                if (x < arr[mid])
+                if (arr[mid] == number)
                 {
-                    right = mid - 1;
+                    found = true;
+                    break;
                 }
-                else
+                else if (arr[mid] < number)
                 {
                     left = mid + 1;
                 }
+                else
+                {
+                    right = mid - 1;
+                }
             }
-
-            int pos = left;
-            int[] result = new int[n + 1];
-
-            for (int i = 0; i < pos; i++)
+            if (found)
             {
-                result[i] = arr[i];
+                Console.WriteLine("Yes");
             }
-
-            result[pos] = x;
-            for (int i = pos; i < n; i++)
+            else
             {
-                result[i + 1] = arr[i];
-            }
-            for (int i = 0; i < result.Length; i++)
-            {
-                Console.Write(result[i] + " ");
+                Console.WriteLine("No");
             }
         }
     }
