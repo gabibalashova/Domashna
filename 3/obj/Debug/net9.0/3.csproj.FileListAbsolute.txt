@@ -1,0 +1,15 @@
+F:\GABI\Visual studio\MasivandList\3\bin\Debug\net9.0\3.exe
+F:\GABI\Visual studio\MasivandList\3\bin\Debug\net9.0\3.deps.json
+F:\GABI\Visual studio\MasivandList\3\bin\Debug\net9.0\3.runtimeconfig.json
+F:\GABI\Visual studio\MasivandList\3\bin\Debug\net9.0\3.dll
+F:\GABI\Visual studio\MasivandList\3\bin\Debug\net9.0\3.pdb
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\3.GeneratedMSBuildEditorConfig.editorconfig
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\3.AssemblyInfoInputs.cache
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\3.AssemblyInfo.cs
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\3.csproj.CoreCompileInputs.cache
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\3.sourcelink.json
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\3.dll
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\refint\3.dll
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\3.pdb
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\3.genruntimeconfig.cache
+F:\GABI\Visual studio\MasivandList\3\obj\Debug\net9.0\ref\3.dll
